@@ -19,7 +19,39 @@
         }
       }
 
-      console.log(getComputerChoice());
+      //console.log(getComputerChoice());
+
+      function playRound(playerSelection, computerSelection) {
+        // your code here!
+
+        if (playerSelection.equalsIgnoreCase("rock")) {
+          if (computerSelection.equalsIgnoreCase("paper")) {
+            return "You Lose! Paper beats rock";
+          } else if (computerSelection.equalsIgnoreCase("scissors")) {
+            return "You Win! Rock beats Scissors";
+          } else return "tie";
+        }
+
+        if (playerSelection.equalsIgnoreCase("paper")) {
+          if (computerSelection.equalsIgnoreCase("rock")) {
+            return "You Win! Paper beats rock";
+          } else if (computerSelection.equalsIgnoreCase("scissors")) {
+            return "You Lose! Scissors beats paper";
+          } else return "tie";
+        }
+
+        if (playerSelection.equalsIgnoreCase("scissors")) {
+          if (computerSelection.equalsIgnoreCase("paper")) {
+            return "You Win! Scissors beats Paper";
+          } else if (computerSelection.equalsIgnoreCase("rock")) {
+            return "You Lose! Rock beats Scissors";
+          } else return "tie";
+        }
+      }
+
+      const playerSelection = "rock";
+      const computerSelection = getComputerChoice();
+      console.log(playRound(playerSelection, computerSelection));
     </script>
   </body>
 </html>
