@@ -19,31 +19,31 @@
         }
       }
 
-      //console.log(getComputerChoice());
-
       function playRound(playerSelection, computerSelection) {
-        // your code here!
+        // Convert both selections to lowercase
+        playerSelection = playerSelection.toLowerCase();
+        computerSelection = computerSelection.toLowerCase();
 
-        if (playerSelection.equalsIgnoreCase("rock")) {
-          if (computerSelection.equalsIgnoreCase("paper")) {
+        if (playerSelection === "rock") {
+          if (computerSelection === "paper") {
             return "You Lose! Paper beats rock";
-          } else if (computerSelection.equalsIgnoreCase("scissors")) {
+          } else if (computerSelection === "scissors") {
             return "You Win! Rock beats Scissors";
           } else return "tie";
         }
 
-        if (playerSelection.equalsIgnoreCase("paper")) {
-          if (computerSelection.equalsIgnoreCase("rock")) {
+        if (playerSelection === "paper") {
+          if (computerSelection === "rock") {
             return "You Win! Paper beats rock";
-          } else if (computerSelection.equalsIgnoreCase("scissors")) {
+          } else if (computerSelection === "scissors") {
             return "You Lose! Scissors beats paper";
           } else return "tie";
         }
 
-        if (playerSelection.equalsIgnoreCase("scissors")) {
-          if (computerSelection.equalsIgnoreCase("paper")) {
+        if (playerSelection === "scissors") {
+          if (computerSelection === "paper") {
             return "You Win! Scissors beats Paper";
-          } else if (computerSelection.equalsIgnoreCase("rock")) {
+          } else if (computerSelection === "rock") {
             return "You Lose! Rock beats Scissors";
           } else return "tie";
         }
